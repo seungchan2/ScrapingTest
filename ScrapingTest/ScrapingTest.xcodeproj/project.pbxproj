@@ -13,6 +13,9 @@
 		ECFE3F9728900F9900150699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFE3F9528900F9900150699 /* Main.storyboard */; };
 		ECFE3F9928900F9A00150699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFE3F9828900F9A00150699 /* Assets.xcassets */; };
 		ECFE3F9C28900F9A00150699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFE3F9A28900F9A00150699 /* LaunchScreen.storyboard */; };
+		ECFE3FA52890105900150699 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = ECFE3FA42890105900150699 /* SwiftSoup */; };
+		ECFE3FAB289010F200150699 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ECFE3FAA289010F200150699 /* Alamofire */; };
+		ECFE3FAE2890122A00150699 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = ECFE3FAD2890122A00150699 /* Kanna */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFE3FAE2890122A00150699 /* Kanna in Frameworks */,
+				ECFE3FA52890105900150699 /* SwiftSoup in Frameworks */,
+				ECFE3FAB289010F200150699 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = ScrapingTest;
+			packageProductDependencies = (
+				ECFE3FA42890105900150699 /* SwiftSoup */,
+				ECFE3FAA289010F200150699 /* Alamofire */,
+				ECFE3FAD2890122A00150699 /* Kanna */,
+			);
 			productName = ScrapingTest;
 			productReference = ECFE3F8C28900F9900150699 /* ScrapingTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,11 @@
 				Base,
 			);
 			mainGroup = ECFE3F8328900F9900150699;
+			packageReferences = (
+				ECFE3FA32890105900150699 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				ECFE3FA9289010F200150699 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ECFE3FAC2890122A00150699 /* XCRemoteSwiftPackageReference "Kanna" */,
+			);
 			productRefGroup = ECFE3F8D28900F9900150699 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,6 +372,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECFE3FA32890105900150699 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		ECFE3FA9289010F200150699 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		ECFE3FAC2890122A00150699 /* XCRemoteSwiftPackageReference "Kanna" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tid-kijyun/Kanna.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECFE3FA42890105900150699 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECFE3FA32890105900150699 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		ECFE3FAA289010F200150699 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECFE3FA9289010F200150699 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		ECFE3FAD2890122A00150699 /* Kanna */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECFE3FAC2890122A00150699 /* XCRemoteSwiftPackageReference "Kanna" */;
+			productName = Kanna;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECFE3F8428900F9900150699 /* Project object */;
 }
